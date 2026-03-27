@@ -1,218 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<title>How to Install ARCANEO – DnD5e Character Sheet Exporter</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Install ARCANEO – DnD5e Character Sheet Exporter</title>
 
-<style>
+  <style>
+    :root {
+      --bg: #111;
+      --panel: #1b1b1b;
+      --panel-2: #202020;
+      --text: #eee;
+      --muted: #cfcfcf;
+      --soft: #b8b8b8;
+      --accent: #f0b35a;
+      --border: #2e2e2e;
+      --code: #222;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+      --radius: 14px;
+    }
 
-body{
-font-family:Arial,Helvetica,sans-serif;
-background:#111;
-color:#eee;
-margin:0;
-padding:40px;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-.container{
-max-width:900px;
-margin:auto;
-}
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
 
-.card{
-background:#1b1b1b;
-border-radius:12px;
-padding:25px;
-margin-bottom:30px;
-}
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+    }
 
-img{
-width:100%;
-border-radius:10px;
-margin-top:15px;
-}
+    .hero {
+      margin-bottom: 28px;
+    }
 
-code{
-background:#222;
-padding:8px 12px;
-border-radius:6px;
-display:block;
-margin-top:10px;
-word-break:break-all;
-}
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
 
-h1{
-margin-bottom:40px;
-}
+    h1 {
+      margin: 0 0 14px;
+      font-size: 2.3rem;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
 
-</style>
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 760px;
+    }
 
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      margin-bottom: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: 1.5rem;
+      line-height: 1.2;
+    }
+
+    h3 {
+      margin: 26px 0 10px;
+      font-size: 1.1rem;
+      line-height: 1.35;
+      color: #fff;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+
+    strong,
+    b {
+      color: #fff;
+    }
+
+    .intro-list {
+      margin: 14px 0 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .intro-list li {
+      margin-bottom: 8px;
+    }
+
+    .step-note {
+      margin-top: 6px;
+      color: var(--soft);
+    }
+
+    .image-single {
+      margin-top: 14px;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 14px;
+    }
+
+    @media (min-width: 760px) {
+      .image-grid.two {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: #151515;
+    }
+
+    code {
+      display: block;
+      margin-top: 10px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: var(--code);
+      border: 1px solid var(--border);
+      color: #f3d39a;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 0.95rem;
+      word-break: break-all;
+      overflow-wrap: anywhere;
+    }
+
+    .section-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 24px 0 0;
+    }
+
+    .small {
+      font-size: 0.96rem;
+      color: var(--soft);
+    }
+  </style>
 </head>
 
 <body>
+  <div class="container">
 
-<div class="container">
+    <section class="hero">
+      <div class="eyebrow">ARCANEO Installation Guide</div>
+      <h1>How to Install ARCANEO – DnD5e Character Sheet Exporter</h1>
+      <p class="lead">
+        You can install the module directly from the Foundry VTT module browser. Two quick installation methods are available, and both are explained below.
+      </p>
+    </section>
 
-<h1>How to Install ARCANEO – DnD5e Character Sheet Exporter</h1>
+    <div class="card">
+      <h2>Installation Methods</h2>
+      <ul class="intro-list">
+        <li><strong>Method 1:</strong> Install the module directly from the Foundry module browser.</li>
+        <li><strong>Method 2:</strong> Install the module using the Manifest URL.</li>
+      </ul>
+    </div>
 
-<div class="card">
+    <div class="card">
+      <h2>Method 1 — Foundry Module Browser</h2>
 
-<p>
-You can install the module directly from the Foundry VTT module browser.
-</p>
-<p>
-Ci sono due metodi rapidi:
-</p>
-<p>
-Il primo è direttamente con il Foundry Module Browser.
-</p>
-<p>
-Il secondo è con il Manifest URL.
-</p>
-<p>
-Qui di seguito vi spieghiamo entrambi i metodi.
-</p>
-  
-</div>
+      <h3>Step 1 — Open Foundry VTT, go to Add-on Modules, and click Install Module</h3>
+      <div class="image-single">
+        <img src="images/How-to-01.webp" alt="Open Foundry VTT, go to Add-on Modules, and click Install Module">
+      </div>
 
-<div class="card">
+      <h3>Step 2 — Search for the module</h3>
+      <p>
+        Search for <strong>ARCANEO – DnD5e Character Sheet Exporter</strong>.
+      </p>
 
-<h2>Method: Foundry Module Browser</h2>
+      <h3>Step 3 — Click Install</h3>
+      <p>
+        After clicking <strong>Install</strong>, Foundry will download and install the module.
+      </p>
+      <p>
+        Once the installation is complete, you will see a confirmation message at the top of the screen, and the module will appear in the installed modules list.
+      </p>
 
-<h3>Step 1 — Open Foundry VTT, go to Add-on Modules and Click Install Module</h3>
+      <div class="image-grid two">
+        <img src="images/How-to-03.webp" alt="Installation confirmation message in Foundry VTT">
+        <img src="images/How-to-04.webp" alt="Installed module visible in the modules list">
+      </div>
+    </div>
 
-<!-- IMAGE STEP 2 -->
-<img src="images/How-to-01.webp">
+    <div class="card">
+      <h2>Method 2 — Manifest URL</h2>
 
-<h3>Step 2 — Search the module</h3>
+      <p>
+        If the module does not appear yet in your Foundry client, you can install it using the Manifest URL.
+      </p>
 
-<p>
-Search for:
-<b>ARCANEO – DnD5e Character Sheet Exporter</b>
-</p>
+      <h3>Step 1 — Open Foundry VTT, go to Add-on Modules, and click Install Module</h3>
+      <div class="image-single">
+        <img src="images/How-to-01.webp" alt="Open Foundry VTT, go to Add-on Modules, and click Install Module">
+      </div>
 
-<!-- IMAGE STEP 2 -->
+      <h3>Step 2 — Paste the Manifest URL</h3>
+      <p>
+        Paste this URL into the <strong>Manifest URL</strong> field:
+      </p>
 
-<h3>Step 3 — Click Install</h3>
+      <code>https://raw.githubusercontent.com/ARCANEO-dev/arcaneo-dnd5e-character-sheet-exporter/main/module.json</code>
 
-<!-- IMAGE STEP 3 -->  
-  
-<p>
-After clicking <b>Install</b>, Foundry will download and install the module.
-</p>
+      <div class="image-single">
+        <img src="images/How-to-02-manifest.webp" alt="Paste the Manifest URL into the Manifest URL field">
+      </div>
 
-<p>
-Then you will see a confirmation message at the top of the screen and the module will appear in the installed modules list.
-</p>
-<!-- IMAGE STEP 5 -->
-<img src="images/How-to-03.webp"> <img src="images/How-to-04.webp">
+      <h3>Step 3 — Click Install</h3>
+      <p>
+        After clicking <strong>Install</strong>, Foundry will download and install the module.
+      </p>
+      <p>
+        Once the installation is complete, you will see a confirmation message at the top of the screen, and the module will appear in the installed modules list.
+      </p>
 
-</div>
+      <div class="image-grid two">
+        <img src="images/How-to-03.webp" alt="Installation confirmation message in Foundry VTT">
+        <img src="images/How-to-04.webp" alt="Installed module visible in the modules list">
+      </div>
+    </div>
 
-<div class="card">
+    <div class="card">
+      <h2>Enable the Module</h2>
 
-<h2>Method: Manifest URL</h2>
+      <p>
+        Once installed, enable the module inside your world.
+      </p>
 
-<p>
-If the module does not appear yet in your Foundry client, you can install it using the Manifest URL.
-</p>
+      <div class="image-grid">
+        <img src="images/How-to-05.webp" alt="Open Manage Modules inside the world">
+        <img src="images/How-to-06.webp" alt="Enable the ARCANEO module">
+        <img src="images/How-to-07.webp" alt="Save module activation settings">
+      </div>
+    </div>
 
-<h3>Step 1 — Open Foundry VTT, go to Add-on Modules and Click Install Module</h3>
+    <div class="card">
+      <h2>How to Use It</h2>
 
-<!-- IMAGE STEP -->
-<img src="images/How-to-01.webp">
+      <p>
+        Open the character sheet you want to export, then go to <strong>Toggle Controls</strong>.
+      </p>
 
-<h3>Step 2 — Paste the Manifest URL</h3>
+      <div class="image-single">
+        <img src="images/How-to-08b.webp" alt="Open the character sheet and go to Toggle Controls">
+      </div>
 
-<p>Paste this Manifest URL in the "Manifest URL" slot:</p>
-  
-<code>
-https://raw.githubusercontent.com/ARCANEO-dev/arcaneo-dnd5e-character-sheet-exporter/main/module.json
-</code>
-<!-- IMAGE STEP -->
-<img src="images/How-to-02-manifest.webp">
+      <p>
+        Then click <strong>ARCANEO Export Character Sheet</strong>.
+      </p>
+      <p class="small">
+        Your export is ready.
+      </p>
 
-<h3>...and Click Install</h3>
-<p>
-After clicking <b>Install</b>, Foundry will download and install the module.
-</p>
+      <div class="image-single">
+        <img src="images/How-to-09b.webp" alt="Click ARCANEO Export Character Sheet">
+      </div>
+    </div>
 
-<p>
-Then you will see a confirmation message at the top of the screen and the module will appear in the installed modules list.
-</p>
+    <div class="card">
+      <h2>Compatibility</h2>
+      <p>
+        Compatible with <strong>Foundry VTT v13</strong> and the <strong>DnD5e system (5.2+)</strong>.
+      </p>
+    </div>
 
-<!-- IMAGE: installation confirmation message -->
-<img src="images/How-to-03.webp">
+    <div class="card">
+      <h2>Feedback</h2>
+      <p>
+        If you encounter any issues or have suggestions for improvements, feel free to share your feedback.
+      </p>
+      <p>
+        Your ideas help shape the future of ARCANEO tools and modules.
+      </p>
+    </div>
 
-<!-- IMAGE: module visible in module list -->
-<img src="images/How-to-04.webp">
-
-</div>
-
-<div class="card">
-
-<h2>Enable the Module</h2>
-
-<p>
-Once installed, enable the module inside your world.
-</p>
-
-<!-- IMAGE: module visible in module list -->
-<img src="images/How-to-05.webp">
-
-<!-- IMAGE: module visible in module list -->
-<img src="images/How-to-06.webp">  
-
-<!-- IMAGE: module visible in module list -->
-<img src="images/How-to-07.webp">  
-
-</div>
-
-<div class="card">
-<h2>HOW TO USE</h2>
-  
-<p>
-It's very easy: Open the Character Sheet you want to export and go to Toggle Controls.
-</p>
-
-<!-- IMAGE: module visible in module list -->
-<img src="images/How-to-08b.webp">  
-
-<p>
-Then click ARCANEO Export Character Sheet. It's done. Have fun! :D
-</p>
-  
-<!-- IMAGE: module visible in module list -->
-<img src="images/How-to-09b.webp">  
-  
-</div>
-
-<div class="card">
-
-<h2>Compatibility</h2>
-
-<p>
-Compatible with <b>Foundry VTT v13</b> and the <b>DnD5e system (5.2+)</b>.
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>Feedback</h2>
-
-<p>
-If you encounter any issues or have suggestions for improvements, feel free to share your feedback.
-</p>
-
-<p>
-Your ideas help shape the future of ARCANEO tools and modules.
-</p>
-
-</div>
-
-</div>
-
+  </div>
 </body>
 </html>
