@@ -159,11 +159,37 @@
     }
 
     .small {
-      font-size: 0.96rem;
-      color: var(--soft);
-    }
-  </style>
-</head>
+  font-size: 0.96rem;
+  color: var(--soft);
+}
+
+/* --- RESULT BOX --- */
+
+.result-intro {
+  margin: 18px 0 18px;
+  padding: 14px 16px;
+  border-left: 4px solid var(--accent);
+  background: linear-gradient(90deg, rgba(240, 179, 90, 0.10), rgba(240, 179, 90, 0.03));
+  border-radius: 10px;
+}
+
+.result-intro p {
+  margin: 6px 0 0;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.result-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+</style>
 
 <body>
   <div class="container">
@@ -287,9 +313,10 @@ Then click <strong>ARCANEO Export Character Sheet</strong>.
 <img src="images/How-to-09b.webp">
 </div>
 
-<p class="small">
-Your export is ready.
-</p>
+<div class="result-intro">
+  <span class="result-badge">Result</span>
+  <p>Your export is ready.</p>
+</div>
 
 <div class="image-grid two">
 <img src="images/Lyra_pat01.webp" alt="Exported character sheet example">
