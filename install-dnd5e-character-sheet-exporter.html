@@ -111,12 +111,14 @@
       margin-bottom: 8px;
     }
 
-    .step-note {
-      margin-top: 6px;
-      color: var(--soft);
+    .image-single {
+      margin-top: 14px;
     }
 
-    .image-single {
+    .image-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
       margin-top: 14px;
     }
 
@@ -133,15 +135,14 @@
       }
     }
 
-img {
-  max-width: 900px;
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: #151515;
-}
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: #151515;
+    }
 
     code {
       display: block;
@@ -155,12 +156,6 @@ img {
       font-size: 0.95rem;
       word-break: break-all;
       overflow-wrap: anywhere;
-    }
-
-    .section-divider {
-      height: 1px;
-      background: var(--border);
-      margin: 24px 0 0;
     }
 
     .small {
@@ -202,6 +197,11 @@ img {
         Search for <strong>ARCANEO – DnD5e Character Sheet Exporter</strong>.
       </p>
 
+      <!-- Optional future screenshot -->
+      <!-- <div class="image-single">
+        <img src="images/How-to-02-search.webp" alt="Search for the module in Foundry VTT">
+      </div> -->
+
       <h3>Step 3 — Click Install</h3>
       <p>
         After clicking <strong>Install</strong>, Foundry will download and install the module.
@@ -210,7 +210,7 @@ img {
         Once the installation is complete, you will see a confirmation message at the top of the screen, and the module will appear in the installed modules list.
       </p>
 
-      <div class="image-grid two">
+      <div class="image-stack">
         <img src="images/How-to-03.webp" alt="Installation confirmation message in Foundry VTT">
         <img src="images/How-to-04.webp" alt="Installed module visible in the modules list">
       </div>
@@ -247,7 +247,7 @@ img {
         Once the installation is complete, you will see a confirmation message at the top of the screen, and the module will appear in the installed modules list.
       </p>
 
-      <div class="image-grid two">
+      <div class="image-stack">
         <img src="images/How-to-03.webp" alt="Installation confirmation message in Foundry VTT">
         <img src="images/How-to-04.webp" alt="Installed module visible in the modules list">
       </div>
